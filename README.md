@@ -13,3 +13,4 @@ on [O'Reilly Learning](https://learning.oreilly.com).
 ## References
 
 * "Learning Rust" tutorial: https://www.packtpub.com/eu/application-development/learning-rust-video
+* "Learning Rust" source code: https://github.com/PacktPublishing/Learning-Rust-video
