@@ -1,24 +1,24 @@
 #[derive(Clone, Debug, PartialEq)]
-struct Bucketizer {
+pub struct Bucketizer {
     buckets: Vec<Bucket>
 }
 
 type Bucket = (Option<f64>, Option<f64>, f64);
 
 impl Bucketizer {
-    fn new() -> Self {
+    pub fn new() -> Self {
         Bucketizer {
             buckets: Vec::new()
         }
     }
 
-    fn bucket(self, min: Option<f64>, max: Option<f64>, value: f64) -> Self {
+    pub fn bucket(self, min: Option<f64>, max: Option<f64>, value: f64) -> Self {
         let mut new = self;
         new.buckets.push((min, max, value));
         new
     }
 
-    fn bucketize(&self, input: f64) -> Option<f64> {
+    pub fn bucketize(&self, input: f64) -> Option<f64> {
         for bucket in &self.buckets {
             match *bucket {
                 (None, None, val) => return Some(val),
