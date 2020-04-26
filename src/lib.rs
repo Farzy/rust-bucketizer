@@ -4,7 +4,7 @@
 //!
 //! # Example
 //! ```
-//! use bucketize::Bucketizer;
+//! use bucketizer::Bucketizer;
 //!
 //! let b = Bucketizer::new()
 //!     .bucket(Some(10.0), Some(20.0), 15.0)
@@ -28,7 +28,7 @@
 ///
 /// # Example
 /// ```
-/// use bucketize::Bucketizer;
+/// use bucketizer::Bucketizer;
 ///
 /// let b = Bucketizer::new()
 ///     .bucket(Some(10.0), Some(20.0), 15.0)
@@ -67,7 +67,7 @@ impl Bucketizer {
     /// or greater.
     ///
     /// ```
-    /// # use bucketize::Bucketizer;
+    /// # use bucketizer::Bucketizer;
     /// let b = Bucketizer::new().bucket(Some(10.0), None, 10.0);
     ///
     /// assert_eq!(b.bucketize(12.0), Some(10.0));
@@ -77,7 +77,7 @@ impl Bucketizer {
     /// Here, we create a `Bucketizer` matching values from 0 to < 10 and from
     /// 10 to infinity.
     /// ```
-    /// # use bucketize::Bucketizer;
+    /// # use bucketizer::Bucketizer;
     /// let b = Bucketizer::new()
     ///     .bucket(Some(10.0), None, 10.0)
     ///     .bucket(Some(0.0), Some(10.0), 5.0);
