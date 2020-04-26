@@ -13,11 +13,9 @@ impl Bucketizer {
     }
 
     fn bucket(self, min: Option<f64>, max: Option<f64>, value: f64) -> Self {
-        let mut v = self.buckets;
-        v.push((min, max, value));
-        Bucketizer {
-            buckets: v
-        }
+        let mut new = self;
+        new.buckets.push((min, max, value));
+        new
     }
 
     fn bucketize(&self, input: f64) -> Option<f64> {
